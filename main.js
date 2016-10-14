@@ -97,17 +97,18 @@ function generateTestCases()
 		var fileWithContent = _.some(constraints, {kind: 'fileWithContent' });
 		var pathExists      = _.some(constraints, {kind: 'fileExists' });
 
-		var phoneNumber = false
-		var options = false
 		var numberList = [[0,1,2,3,4,5,6,7,8,9], [0,1,2,3,4,5,6,7,8,9], [0,1,2,3,4,5,6,7,8,9]]
 		var params = {};
 		
+		var phoneNumber = false
+		var options = false
+	
+
 		// initialize params
 		for(var i =0; i < functionConstraints[funcName].params.length; i++)
 		{
 			var paramName = functionConstraints[funcName].params[i];
-			//params[paramName] = '\'' + faker.phone.phoneNumber()+'\'';
-			//params[paramName] = '\'\'';
+			
 			params[paramName] = ['\'\'']
 			if (paramName == "phoneNumber")
 			{
