@@ -86,7 +86,6 @@ function cartesianProduct(list) {
 function generateTestCases()
 {
 
-    console.log(functionConstraints);
 	var content = "var subject = require('./subject.js')\nvar mock = require('mock-fs');\n";
 	for ( var funcName in functionConstraints )
 	{
